@@ -1,0 +1,479 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.body {
+  background-image: radial-gradient(
+      circle at 13% 47%,
+      rgba(140, 140, 140, 0.03) 0%,
+      rgba(140, 140, 140, 0.03) 25%,
+      transparent 25%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 28% 63%,
+      rgba(143, 143, 143, 0.03) 0%,
+      rgba(143, 143, 143, 0.03) 16%,
+      transparent 16%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 81% 56%,
+      rgba(65, 65, 65, 0.03) 0%,
+      rgba(65, 65, 65, 0.03) 12%,
+      transparent 12%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 26% 48%,
+      rgba(60, 60, 60, 0.03) 0%,
+      rgba(60, 60, 60, 0.03) 6%,
+      transparent 6%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 97% 17%,
+      rgba(150, 150, 150, 0.03) 0%,
+      rgba(150, 150, 150, 0.03) 56%,
+      transparent 56%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(25, 25, 25, 0.03) 0%,
+      rgba(25, 25, 25, 0.03) 36%,
+      transparent 36%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 55% 52%,
+      rgba(69, 69, 69, 0.03) 0%,
+      rgba(69, 69, 69, 0.03) 6%,
+      transparent 6%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+}
+html {
+  scroll-behavior: smooth;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  left: 30px;
+  border-radius: 50%;
+  /* float: left; */
+  background-color: #0e1c36;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 130%;
+}
+.clothing_home {
+  display: flex;
+  flex-flow: column;
+  margin-top: 30;
+
+  /* justify-content: space-between; */
+  align-items: center;
+  /* height: 100vh; */
+}
+.clothing_home h1 {
+  padding: 50px 0;
+  color: #1f4287;
+  font-size: xxx-large;
+  font-family: "Bree Serif", serif;
+}
+.selector {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 250px;
+  padding-top: 10px;
+
+  /* top: 30px; */
+  position: absolute;
+  animation-name: myselector;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+.blank {
+  background-color: none;
+}
+
+.notblank {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  height: 63px;
+  background-color: #fdfdfd;
+  z-index: 5;
+  position: fixed;
+  animation-name: mynotblank;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+@keyframes mynotblank {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes myselector {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.active {
+  color: #0e1c36;
+}
+.liActive:hover:after {
+  background-color: #0e1c36;
+}
+
+.clothing_vector {
+  display: flex;
+  width: 274px;
+  /* padding: 0 20px; */
+  transform: rotate(-5deg);
+}
+.clothing_vector img {
+  width: inherit;
+}
+@keyframes myvector {
+  from {
+    transform: translate(-700px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes myvector_two {
+  from {
+    transform: translate(700px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+.shopping-cart-icon {
+  position: relative;
+  margin-left: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.real-icon {
+  color: #575151d9;
+  transition: 0.5s;
+}
+
+.real-icon:hover {
+  color: #0e1c36;
+}
+
+.description {
+  width: 300px;
+  /* margin-right: 100px; */
+  font-family: "Bree Serif", serif;
+}
+@keyframes myparagraph {
+  from {
+    transform: translateY(500px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.description h1 {
+  font-size: xx-large;
+}
+.description p {
+  color: #303a52;
+  padding-top: 20px;
+}
+.blank_clothing {
+  display: none;
+}
+
+.holder {
+  cursor: pointer;
+  overflow: hidden;
+  width: 800px;
+  position: relative;
+  /* height: 600px; */
+  border-radius: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  transition: transform 0.5s;
+}
+
+.holderEnd {
+  animation-name: myHolderDisappear;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  opacity: 0;
+}
+@keyframes myHolderDisappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.holderStart {
+  animation-name: myHolder;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.holder:hover {
+  transform: scale(1.05);
+}
+@keyframes myHolder {
+  from {
+    transform: translateY(95px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.intro {
+  position: relative;
+  overflow: hidden;
+}
+.intro_paragraph {
+  width: 400px;
+  position: absolute;
+  left: 182px;
+  top: 203px;
+  color: #1f4287;
+  font-family: "Bree Serif", serif;
+  animation-name: myvector;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.intro_vector {
+  position: absolute;
+  right: 30px;
+  top: 200px;
+  width: 555px;
+  animation-name: myvector_two;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+a {
+  color: #575151d9;
+  font-family: "Bree Serif", serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer{
+  font-size: large;
+  color:#1f4287;
+  font-family: "Bree Serif", serif;
+  margin-left:100px;
+  margin-bottom:20px;
+}
+
+.selector {
+  z-index: 1;
+}
+
+.selector li {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  padding-right: 30px;
+}
+.selector li:last-child {
+  margin-right: 0;
+}
+.selector ul {
+  margin-top: 10px;
+}
+.selector li:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.selector li:hover:after {
+  width: 100%;
+  background: #575151d9;
+}
+.intro_paragraph h3 {
+  font-size: xxx-large;
+}
+@media screen and (min-width: 500px) {
+  .phone_logo {
+    display: none;
+  }
+  .phone_menu {
+    display: none;
+  }
+  .toolbar {
+    display: none;
+  }
+}
+@media screen and (max-width: 499px) {
+  .phone_menu {
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 35px;
+    justify-content: center;
+    left: 15px;
+    align-items: center;
+  }
+
+  .toolbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+  }
+
+  .dropbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .sidedraw {
+    position: fixed;
+    width: 230px;
+    max-width: 60%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: #fff;
+    padding: 32px 16px;
+    box-sizing: border-box;
+  }
+
+  .sidedraw ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .phone_logo {
+    width: 70px;
+    position: absolute;
+    border-radius: 50%;
+    top: 20px;
+    right: 15px;
+    height: 70px;
+    /* justify-content: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e1c36;
+  }
+
+  .phone_logo img {
+    width: 110%;
+  }
+
+  .selector {
+    display: none;
+  }
+
+  .clothing_home {
+    width: 100%;
+  }
+  .clothing_home h1 {
+    font-size: x-large;
+  }
+  .holder {
+    width: 90%;
+    height: 200px;
+  }
+  .clothing_vector {
+    width: 40%;
+    padding: 0 2px;
+  }
+  .clothing_vector img {
+    width: 100%;
+  }
+  .description {
+    width: 55%;
+    font-size: small;
+  }
+  .description h1,
+  .description p {
+    padding: 0;
+  }
+
+  .intro_paragraph {
+    width: 283px;
+    left: 14px;
+    top: 474px;
+  }
+  .intro_paragraph h3 {
+    font-size: xx-large;
+  }
+  .intro_paragraph p {
+    font-size: larger;
+  }
+  .intro_vector {
+    right: -108px;
+    top: 206px;
+    width: 400px;
+  }
+}
